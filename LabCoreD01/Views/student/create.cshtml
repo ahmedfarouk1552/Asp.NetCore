@@ -1,0 +1,64 @@
+﻿@model LabCoreD01.Models.Student
+@{
+    ViewData["Title"] = "create";
+}
+
+<h1>create</h1>
+<form method="post">
+    <div >
+        @Html.LabelFor(n => n.StId)
+        @Html.TextBoxFor(n => n.StId)
+        @Html.ValidationMessageFor(n=>n.StId)
+    </div>
+
+    <div>
+        @Html.LabelFor(n => n.StFname)
+        @Html.TextBoxFor(n => n.StFname)
+        @Html.ValidationMessageFor(n => n.StFname)
+
+    </div>
+
+    <div>
+        @Html.LabelFor(n => n.StLname)
+        @Html.TextBoxFor(n => n.StLname)
+        @Html.ValidationMessageFor(n => n.StLname)
+
+    </div>
+
+    <div>
+        @Html.LabelFor(n => n.StAge)
+        @Html.TextBoxFor(n => n.StAge)
+        @Html.ValidationMessageFor(n => n.StAge)
+
+    </div>
+
+    <div>
+        @Html.LabelFor(n => n.StAddress)
+        @Html.TextBoxFor(n => n.StAddress)
+        @Html.ValidationMessageFor(n => n.StAddress)
+
+    </div>
+
+    <div>
+        @Html.LabelFor(n => n.DeptId)
+        @Html.DropDownListFor(n => n.DeptId, (SelectList)ViewBag.dept)
+        @Html.ValidationMessageFor(n => n.DeptId)
+
+    </div>
+
+    <div>
+        <input type="submit" value="Add" />
+    </div>
+
+
+
+
+
+
+
+</form>
+<head>
+    <link href="C:\Users\WG\.nuget\packages\bootstrap\5.0.2\contentFiles\any\any\wwwroot\css\bootstrap.css" rel="stylesheet" />
+    <script src="C:\Users\WG\.nuget\packages\bootstrap\5.0.2\contentFiles\any\any\wwwroot\js\bootstrap.js"></script>
+
+</head>

@@ -1,0 +1,44 @@
+﻿@model List<LabCoreD01.Models.Student> 
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Index</h1>
+ @Html.ActionLink("Create", "create", "student")
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Department</th>
+        <th>Delete</th>
+        <th>Update</th>
+        
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.StId</td>
+    <td>@item.StFname @item.StLname</td>
+    <td>@item.StAge</td>
+    <td>@item.StAddress</td>
+    @if (item.Dept != null)
+    {
+        <td>@item.Dept.DeptName</td>
+    }
+    else
+    {
+        <td></td>
+    }
+    <td>@Html.ActionLink("delete", "delete", new { id = item.StId})</td>
+    <td>@Html.ActionLink("update", "update",new { id=item.StId})</td>
+
+
+</tr>
+    }
+</table>
+

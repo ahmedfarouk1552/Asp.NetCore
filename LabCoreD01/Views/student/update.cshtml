@@ -1,0 +1,48 @@
+﻿@model LabCoreD01.Models.Student 
+@{
+    ViewData["Title"] = "update";
+}
+
+<h1>update</h1>
+
+<form method="post">
+    <div>
+        @Html.HiddenFor(n=>n.StId)
+    </div>
+
+    <div>
+        @Html.LabelFor(n => n.StFname)
+        @Html.TextBoxFor(n => n.StFname)
+    </div>
+
+    <div>
+        @Html.LabelFor(n => n.StLname)
+        @Html.TextBoxFor(n => n.StLname)
+    </div>
+
+    <div>
+        @Html.LabelFor(n => n.StAge)
+        @Html.TextBoxFor(n => n.StAge)
+    </div>
+
+    <div>
+        @Html.LabelFor(n => n.StAddress)
+        @Html.TextBoxFor(n => n.StAddress)
+    </div>
+
+    <div>
+        @Html.LabelFor(n => n.DeptId)
+        @Html.DropDownListFor(n => n.DeptId, (SelectList)ViewBag.dept)
+    </div>
+
+    <div>
+        <input type="submit" value="Update" />
+    </div>
+
+
+
+
+
+
+
+</form>
